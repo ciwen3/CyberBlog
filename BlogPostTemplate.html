@@ -1,0 +1,25 @@
+    <!-- "Blog Posts" section -->
+    <section id="blog-post-collection" class="blog-posts">
+        <h2 class="section-title">Blog Posts</h2>
+        <h3>Date</h3>
+        <article class="blog-post">
+            <img src="https://raw.githubusercontent.com/ciwen3/Public/master/Python/Steganography/File/Resume.PNG" alt="Butterfly Resume">
+
+            <div class="blog">
+                <h3>Steganography</h3>
+                <h4>Steganograpy: hidden messages in plain sight. </h4>
+                <p>This beautify Butterfly Picture contains a hidden message that you can easily extract. 
+		<br><br>
+		I remeber listening to a podcast about cryptography and hearing someone describe hiding information in the pixels of an image. I was very intrigued by this idea and after 
+		some thought I figured I would give it a try. I knew that the pixel information is represented by numbers between 0 and 255 for RGBA (Red, Green, Blue, Alpha) with PNG files. 
+		I also knew that computers can represent more colors than the human eye can distinguish. Using this information I figured I could write a program that interpreted the values to 
+		represent the hidden data. I decided that all even numbers would represent a '0' and all odd numbers would represent a '1'. this means I can encode data while only slightly changing 
+		the color of the pixel. the slight color change might be noticable to a computer but would be to small for a human to recognize. I then wrote several python program that would take 
+		some form of data (ie. Text, File, etc) and hide it in a PNG picture, assuimg it had enough pixels to fit all the data in it. Using the information and code found at: 
+		<a href="https://github.com/ciwen3/Public/tree/master/Python/Steganography">https://github.com/ciwen3/Public/tree/master/Python/Steganography</a>
+		you can also hide or extract messages from PNG images. 
+		<br><br>
+		In this case the Buttefly Picture contains a pdf copy of my old resume. 
+                </p>
+            </div>
+        </article>
