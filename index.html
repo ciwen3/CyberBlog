@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>STRAT0M'S CYBER BLOG</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <!-- navigation -->
+    <header>
+        <h1>
+            <a href="/">
+                STRAT0M'S CYBER BLOG
+            </a>
+        </h1>
+        <a href="mailto:ciwen3@gmail.com" class="button">Send Email</a>
+        <a href="https://www.linkedin.com/in/ciwen/" class="linkedin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+      <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+    </svg></a>
+
+    </header>
+
+
+    <!-- "About" section -->
+    <section id="about" class="intro">
+        <!--Replace with your own image-->
+        <img src="https://github.com/ciwen3/Public/blob/master/Python/Steganography/Resources/redheart-loremipsum.PNG?raw=true"
+            alt="hidden messag ein picture" height=375px;>
+        <h2 style="color: black;">Hi, I'm Strat0m!</h2>
+        <p style="color: black;">
+	    This is a basic blog about my Cyber Security Experiences. I am a Lead Threat hunter for a SOC and a cybersecurity bootcamp instructor. I have built and managed 2 SOCs previously. My technology passions include everything Linux and FOSS related, as well as programming. 
+	    <br><br>
+            I hope you enjoy my blog. 
+            
+        </p>
+    </section>
+
+
+    <!-- "Blog Posts" section -->
+    <section id="blog-post-collection" class="blog-posts">
+        <h2 class="section-title">Blog Posts</h2>
+        <article class="blog-post">
+            <img src="https://raw.githubusercontent.com/ciwen3/Public/master/Python/Steganography/File/Resume.PNG" alt="Butterfly Resume">
+
+            <div class="blog">
+                <h3>Steganography</h3>
+                <h4>Steganograpy: hidden messages in plain sight. </h4>
+                <p>This beautify Butterfly Picture contains a hidden message that you can easily extract. 
+		<br><br>
+		I remeber listening to a podcast about cryptography and hearing someone describe hiding information in the pixels of an image. I was very intrigued by this idea and after 
+		some thought I figured I would give it a try. I knew that the pixel information is represented by numbers between 0 and 255 for RGBA (Red, Green, Blue, Alpha) with PNG files. 
+		I also knew that computers can represent more colors than the human eye can distinguish. Using this information I figured I could write a program that interpreted the values to 
+		represent the hidden data. I decided that all even numbers would represent a '0' and all odd numbers would represent a '1'. this means I can encode data while only slightly changing 
+		the color of the pixel. the slight color change might be noticable to a computer but would be to small for a human to recognize. I then wrote several python program that would take 
+		some form of data (ie. Text, File, etc) and hide it in a PNG picture, assuimg it had enough pixels to fit all the data in it. Using the information and code found at: 
+		<a href="https://github.com/ciwen3/Public/tree/master/Python/Steganography">https://github.com/ciwen3/Public/tree/master/Python/Steganography</a>
+		you can also hide or extract messages from PNG images. 
+		<br><br>
+		In this case the Buttefly Picture contains a pdf copy of my old resume. 
+                </p>
+            </div>
+        </article>
+
+
+        <!-- second blog post -->
+        <article class="blog-post">
+            <img src="https://www.syslogic-techsvc.com/wp-content/uploads/2020/12/shutterstock_1167477067.jpg" alt="Image-2">
+            <div class="blog">
+                <h3>Burning XCSSET Malware</h3>
+                <h4>When a spy is "burned", it means that they have been discovered.</h4>
+                <p>
+                    I helped a company with an infection, we figured out it was known as XCSSET. In my research of the Malware we found, and the information online I put together a script 
+		    to systematically download each version of the Malware from each server they have check its SHA256 hash against a list of already downloaded malware and if it is unique 
+		    (to me) upload it to virus total. I named the Project BurnItAll because my goal was to frustrate the Malware distributor by downloading every new copy and having it flagged by all 
+		    anti-virus programs before they had a chance to use it against some one in the wild. The other side effect was I was eating up this Threat Actors resources. Both website bandwidth and 
+		    ability to churn out new, slightly modified, version of the malware. 
+		<br><br>
+		    <b>WARNING: </b> this github page contains real samples of the XCSSET Malware saved in zip files. While it was meant to work on Mac OS X it can also run on Linux Operating Systems. 
+		    <b>YOU HAVE BEEN WARNED! </b>
+		<br><br>
+		<a href="https://github.com/ciwen3/Public/blob/master/Bash/BurnItAll/BurnItAll.sh">https://github.com/ciwen3/Public/blob/master/Bash/BurnItAll/BurnItAll.sh</a> 
+		is the script I used to check all know websites and ip addresses for XCSSET and attempt to download all the malware. Once all his bases are belong to me, I would upload them 
+		VirusTotal. VirusTotal would always see it as a new piece of malware do to the small changes the Threat Actors were making to it with each new download. These changes cost the 
+		threat actors money since it takes processing power and intelligence to setup a system that could churn out new versions with each download. My goal was not to shut them down but 
+		to inflate their cost beyond the point it is profittable for them. I was able to run this campaigne or about 2 weeks before all the websites were taken down completely. 
+
+                </p>
+            </div>
+        </article>
+    </section>
+</body>
+
+</html>
+
